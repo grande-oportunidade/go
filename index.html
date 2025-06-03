@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecionando...</title>
+  <!-- Fallback: redireciona em 0 segundos se o JS falhar -->
+  <meta http-equiv="refresh" content="0;url=https://sua-sorteviva.github.io/front/">
+  <script>
+    // Redirecionamento via JavaScript
+    (function() {
+      try {
+        window.location.replace("https://sua-sorteviva.github.io/front/");
+      } catch (e) {
+        // Em caso de erro, cai no fallback do <meta>
+        console.error("Erro no redirecionamento:", e);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecionando para o novo site...</p>
+</body>
+</html>
