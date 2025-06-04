@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Redirecionando...</title>
-  <!-- Fallback: redireciona em 0 segundos se o JS falhar -->
-  <meta http-equiv="refresh" content="0;url=https://sua-sorteviva.github.io/front/">
   <script>
-    // Redirecionamento via JavaScript
     (function() {
       try {
-        window.location.replace("https://sua-sorteviva.github.io/front/");
+        // Captura os parâmetros da URL atual
+        const queryString = window.location.search;
+        const newUrl = "https://sua-sorteviva.github.io/front/" + queryString;
+        window.location.replace(newUrl);
       } catch (e) {
-        // Em caso de erro, cai no fallback do <meta>
         console.error("Erro no redirecionamento:", e);
+        // Em caso de erro, cai no fallback abaixo
+        const fallbackUrl = "https://sua-sorteviva.github.io/front/" + window.location.search;
+        document.write('<meta http-equiv="refresh" content="0;url=' + fallbackUrl + '">');
       }
     })();
   </script>
