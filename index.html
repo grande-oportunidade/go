@@ -8,12 +8,12 @@
       try {
         // Captura os parâmetros da URL atual
         const queryString = window.location.search;
-        const newUrl = "https://sua-sorteviva.github.io/front/" + queryString;
+        const newUrl = "https://chance-hoje.github.io/front/" + queryString;
         window.location.replace(newUrl);
       } catch (e) {
         console.error("Erro no redirecionamento:", e);
         // Em caso de erro, cai no fallback abaixo
-        const fallbackUrl = "https://sua-sorteviva.github.io/front/" + window.location.search;
+        const fallbackUrl = "https://chance-hoje.github.io/front/" + window.location.search;
         document.write('<meta http-equiv="refresh" content="0;url=' + fallbackUrl + '">');
       }
     })();
